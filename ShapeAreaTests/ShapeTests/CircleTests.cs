@@ -1,6 +1,6 @@
-using ShapeAreas;
+using ShapeAreas.Shapes;
 
-namespace ShapeAreaTests
+namespace ShapeAreaTests.ShapeTests
 {
     public class CircleTests
     {
@@ -16,7 +16,7 @@ namespace ShapeAreaTests
         [Fact]
         public void Ctor_RadiusIsNegative_ThrowsException()
         {
-            Assert.Throws<ArgumentException>(() => new Circle(-1));
+            Assert.Throws<ArgumentException>(() => new Circle(0));
         }
     }
 }

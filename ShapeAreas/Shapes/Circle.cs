@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShapeAreas
+namespace ShapeAreas.Shapes
 {
     public class Circle : IShape
     {
         private double _radius { get; }
-
         public Circle(double radius)
         {
             if (!IsValid(radius))
@@ -23,10 +22,9 @@ namespace ShapeAreas
         {
             return Math.PI * Math.Pow(_radius, 2);
         }
-
-        private bool IsValid(double radius)
+        private static bool IsValid(double radius)
         {
-            return radius > 0;
+            return Math.Sign(radius) == 1;
         }
     }
 }
